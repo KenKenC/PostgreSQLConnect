@@ -4,6 +4,10 @@ import java.sql.ResultSet;
 
 import entity.TestTableEntity;
 
+/**
+ * テストテーブルの操作を行ないます。
+ *
+ */
 public class TestTableDbProc extends AbsDbProc<TestTableEntity>{
 
 	/**

@@ -7,13 +7,13 @@ import entity.TestTableEntity;
 public class MainProcCls {
 
 	/** サーバホスト */
-	private String server = "";
+	private String server = "XXX.XXX.XXX.XXX";
 	/** DB名 */
-	private String dbName = "";
+	private String dbName = "{dbName}";
 	/** 接続ユーザID */
-	private String userId = "";
+	private String userId = "{userId}";
 	/** 接続パスワード */
-	private String password = "";
+	private String password = "{password}";
 
 	/**
 	 * プロセスのスタート地点
@@ -41,6 +41,7 @@ public class MainProcCls {
 		ConnectInfo conInfo = new ConnectInfo(this.server, this.dbName,
 				this.userId, this.password);
 
+		// NOTE:下記 実行するテーブルのDbProcとEntityを作成する
 		TestTableDbProc db = new TestTableDbProc(conInfo);
 		TestTableEntity te = db.executeSelect(sql.toString(), new TestTableEntity("1", "test", "20"));
 
